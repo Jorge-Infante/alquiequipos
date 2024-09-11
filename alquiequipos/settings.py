@@ -26,6 +26,7 @@ SECRET_KEY = 'ixobfo&a@!d0^#4(4z$&_p(-=edr@k8mxy=4-0djiq)7u)$p6%'
 DEBUG = True
 
 ALLOWED_HOSTS = ["213.199.42.70", "*"]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # Application definition
@@ -42,7 +43,8 @@ INSTALLED_APPS = [
     'applications.users',
     'applications.clients',
     'applications.products',
-    'applications.orders'
+    'applications.orders',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'alquiequipos.urls'
