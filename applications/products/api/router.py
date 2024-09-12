@@ -5,3 +5,7 @@ router_product = DefaultRouter()
 router_product.register(
     prefix='products', basename='products', viewset=ProductViewSet
 )
+
+router_product.register(
+    prefix='measure', basename='measure', viewset=MeasureViewSet
+)
