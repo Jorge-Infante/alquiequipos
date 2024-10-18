@@ -30,6 +30,5 @@ urlpatterns = [
     path('api/', include(router_user.urls)),
     path('api/', include(router_product.urls)),
     path('api/', include(router_order.urls)),
-    path('api/', include(router_client.urls))
+    path('api/', include(router_client.urls)),
 ]
-
